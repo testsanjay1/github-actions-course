@@ -1,4 +1,4 @@
-name: java
+name: sonar execution
 on:
   push:
     branches:
@@ -6,8 +6,8 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  build:
-    name: Build
+  java:
+    name: java install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

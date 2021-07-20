@@ -1,10 +1,12 @@
 name: java
 on:
   push:
-    branches:
-      - master # or the name of your main branch
+    branches: [ continue-on-error-and-timeout-minutes ]
   pull_request:
-    types: [opened, synchronize, reopened]
+    branches: [ continue-on-error-and-timeout-minutes ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 jobs:
   build:
     name: Build
